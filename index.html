@@ -1,174 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio profesional de Yurian - Desarrollador web">
-    <title>Yurian | Portfolio Profesional</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="estilo.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Para Evelin 🌹</title>
+  <link rel="stylesheet" href="script.js" />
+  <link rel="stylesheet" href="stle.css">
 </head>
 <body>
-    <header class="header" id="header">
-        <div class="container">
-            <div class="logo">
-                <h1 id="site-title">Yurian</h1>
-                <span class="tagline">Portfolio Profesional</span>
-            </div>
-            <nav class="main-nav">
-                <button class="mobile-menu-toggle" aria-label="Abrir menú">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="#home" class="nav-link active"><i class="fas fa-home"></i> Inicio</a></li>
-                    <li class="nav-item"><a href="#about" class="nav-link"><i class="fas fa-user"></i> Sobre Mí</a></li>
-                    <li class="nav-item"><a href="#description" class="nav-link"><i class="fas fa-file-alt"></i> Descripción</a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <!-- Animación de rosas en los costados -->
+  <div class="rosas izquierda"></div>
+  <div class="rosas derecha"></div>
 
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <h2 class="hero-title">Bienvenido a mi Portfolio</h2>
-                <p class="hero-subtitle">Explora mis proyectos y contenidos semanales</p>
-                <a href="#weeks-container" class="btn btn-primary">Ver Proyectos</a>
-            </div>
-        </div>
-    </section>
-
-    <main class="main-content">
-        <div class="container">
-            <section class="section" id="weeks-container">
-                <div class="section-header">
-                    <h2 class="section-title">Mis Proyectos</h2>
-                    <p class="section-subtitle">Una colección de mi trabajo y aprendizaje semana a semana</p>
-                </div>
-                <div class="weeks-container">
-                    <!-- Week cards will be dynamically inserted here using JavaScript -->
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3 class="footer-logo"></h3>
-                    <p class="footer-description">Portfolio base de datos </p>
-                </div>
-                <div class="footer-links">
-                    <h4>Enlaces Rápidos</h4>
-                    <ul>
-                        <li><a href="#home">Inicio</a></li>
-                        <li><a href="#about">Sobre Mí</a></li>
-                        <li><a href="#description">Descripción</a></li>
-                        <li><a href="#contact">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="footer-social">
-                    <h4>Sígueme</h4>
-                    <div class="social-icons">
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Yurian</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Modal for adding new content -->
-    <div id="addContentModal" class="modal">
-        <div class="modal-backdrop"></div>
-        <div class="modal-container">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title">Añadir Nuevo Contenido</h2>
-                    <p class="modal-subtitle">Completa el formulario para agregar un nuevo proyecto</p>
-                    <button class="close-button" aria-label="Cerrar">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <form id="contentForm" class="form">
-                        <div class="form-group">
-                            <label for="weekNumber" class="form-label">Número de Semana:</label>
-                            <div class="input-wrapper">
-                                <i class="fas fa-hashtag input-icon"></i>
-                                <input type="number" id="weekNumber" class="form-control" required min="1">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="weekTitle" class="form-label">N° Semana:</label>
-                            <div class="input-wrapper">
-                                <i class="fas fa-heading input-icon"></i>
-                                <input type="text" id="weekTitle" class="form-control" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="weekSubtitle" class="form-label">Subtítulo:</label>
-                            <div class="input-wrapper">
-                                <i class="fas fa-align-left input-icon"></i>
-                                <input type="text" id="weekSubtitle" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="iconType" class="form-label">Icono:</label>
-                            <div class="select-wrapper">
-                                <i class="fas fa-icons input-icon"></i>
-                                <select id="iconType" class="form-control">
-                                    <option value="code">Código</option>
-                                    <option value="db">Base de Datos</option>
-                                    <option value="terminal">Terminal</option>
-                                    <option value="design">Diseño</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group" id="linksContainer">
-                            <label class="form-label">Enlaces:</label>
-                            <div class="links-header">
-                                <button type="button" id="addLinkButton" class="btn btn-secondary btn-sm">
-                                    <i class="fas fa-plus"></i> Añadir Enlace
-                                </button>
-                            </div>
-                            <div class="link-inputs">
-                                <div class="input-wrapper">
-                                    <i class="fas fa-font input-icon"></i>
-                                    <input type="text" class="form-control link-text" placeholder="Texto del enlace">
-                                </div>
-                                <div class="input-wrapper">
-                                    <i class="fas fa-link input-icon"></i>
-                                    <input type="text" class="form-control link-url" placeholder="URL">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group form-actions">
-                            <button type="button" class="btn btn-outline-secondary" id="cancelButton">Cancelar</button>
-                            <button type="submit" class="btn btn-primary">
-                                <i class="fas fa-save"></i> Guardar Proyecto
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+  <!-- Contenido principal -->
+  <div class="contenedor-mensaje">
+    <h1>🌸 Evelin 🌸</h1>
+    <div id="mensaje" class="mensaje">
+      <!-- El mensaje se insertará con máquina de escribir -->
+      <span id="mensaje-escrito"></span>
     </div>
+  </div>
 
-    <button id="addContentButton" class="float-button" aria-label="Añadir contenido">
-        <i class="fas fa-plus"></i>
-    </button>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
